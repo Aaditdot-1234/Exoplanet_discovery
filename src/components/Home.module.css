@@ -1,0 +1,110 @@
+.home {
+    width: 100%; 
+    background-color: #242424;  
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+.videoContainer {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+}
+
+.videoContainer video { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 0; /* Ensure the video is behind the overlay */
+}
+
+.overlay {  
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: left; 
+    flex-direction: row; 
+    background-image:linear-gradient(to top right, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0));  
+    z-index: 1; 
+}
+
+.home > div:not(.videoContainer) {
+    display: flex;  
+    align-items: center; 
+    justify-content: center; 
+    height: 100vh; 
+    width: 100%;
+}
+
+.history {
+    display: flex; 
+    align-items: flex-start; 
+    justify-content: center; 
+    flex-direction: row;     
+} 
+
+.history h1 { 
+    font-size: 70px;  
+    margin-bottom: 30px;
+    margin-left: 50px;
+}
+
+.history p {
+    width: 80%;
+    margin-left: 50px;
+} 
+ 
+.history > div:nth-child(1) { 
+    /* height: 100%; */
+    width: 60%; 
+}
+
+.history > div:nth-child(2) { 
+    height: 100%;
+    width: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column;
+}
+ 
+.home > div:nth-child(3) {
+    background-color: green; 
+}
+
+.home > div:nth-child(4) {
+    background-color: yellow; 
+}
+ 
+.overlay > div { 
+    margin-left: 50px; 
+    margin-top: 200px; 
+    height: 100%; 
+    width: 50%; 
+    display: flex; 
+    align-items: flex-start; 
+    justify-content: center; 
+    flex-direction: column;
+}
+
+.overlay h1 { 
+    font-size: 70px;  
+    margin-bottom: 30px;
+} 
+
+p {
+    text-align: justify; 
+    font-size: 25px; 
+    font-weight: 500; 
+} 
